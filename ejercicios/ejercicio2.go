@@ -6,5 +6,13 @@ type Tarea struct {
 }
 
 func Ejercicio2(tareas []Tarea) {
-	panic("No implementado")
+	n := len(tareas)
+	for i := 0; i < n-1; i++ {
+		for j := 0; j < n-1-i; j++ {
+			if tareas[j].Tiempo > tareas[j+1].Tiempo {
+				tareas[j], tareas[j+1] = tareas[j+1], tareas[j]
+			}
+		}
+	}
+
 }

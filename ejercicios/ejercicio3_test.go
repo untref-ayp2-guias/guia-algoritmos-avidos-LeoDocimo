@@ -14,7 +14,9 @@ func TestEjercicio3(t *testing.T) {
 		{"o4", 5, 25},
 	}
 	capacidadMochila := 7
+
 	salida := Ejercicio3(objetos, capacidadMochila)
+
 	assert.Len(t, salida, 3, "Se esperaban 3 objetos seleccionados")
 
 	assert.Equal(t, float32(1), salida[Objeto{"o2", 3, 18}], "Se esperaba el objeto o2 con valor 1")
